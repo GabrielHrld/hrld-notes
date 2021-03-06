@@ -1,11 +1,11 @@
 const router = require("express").Router();
 
 router.get('/users/signin', (req, res) => {
-  res.send('signIn view')
+  res.render('users/signin.hbs')
 })
 
 router.get('/users/signup', (req, res) => {
-  res.send('signUp view')
+  res.render('users/signup.hbs')
 })
 
 module.exports = router;
