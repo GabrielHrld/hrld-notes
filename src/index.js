@@ -35,8 +35,12 @@ app.use(
 // Global Variables
 
 // Routes
+app.use(require("./routes/index"));
+app.use(require("./routes/notes"));
+app.use(require("./routes/users"));
 
 // Static Files
+app.use(express.static(path.join(__dirname, "public")));
 
 // Server listenning
 app.listen(app.get("port"), () => {
