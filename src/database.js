@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+require('dotenv').config();
 
 const URI =
-  "mongodb+srv://db_user_gabi:crazylife013@cluster0.s5abe.mongodb.net/notes";
+  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}`; 
 
 //DATABASE connection
 mongoose

@@ -47,8 +47,7 @@ router.post("/users/signup", async (req, res) => {
     });
   } else {
     const user = await User.findOne({ email: email });
-    console.log(user.email);
-    if (user.email === email) {
+    if (user) {
       req.flash("error_msg", "The email is already in use");
       res.redirect("/users/signup");
     } else {
