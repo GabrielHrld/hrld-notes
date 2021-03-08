@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-const { DB_USER, DB_PASS, DB_HOST, DB_NAME } = require("./config/config.js");
+const { DB_URI } = require("./config/config.js");
 
-const URI = `mongodb+srv://db_user_gabi:crazylife013@cluster0.s5abe.mongodb.net/notes`;
+const URI = `${DB_URI}`;
 
 //DATABASE connection
 mongoose
@@ -12,5 +12,4 @@ mongoose
     useFindAndModify: false,
     useUnifiedTopology: true,
   })
-  .then((db) => console.log("[DB] is connected"))
-  .catch((error) => console.error(error));
+  .then((db) => console.log("[DB] is connected"));
