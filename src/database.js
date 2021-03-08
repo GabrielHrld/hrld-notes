@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const { DB_USER, DB_PASS, DB_HOST, DB_NAME } = require("./config/config.js");
 
-const URI = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`;
+const URI = `mongodb+srv://db_user_gabi:crazylife013@cluster0.s5abe.mongodb.net/notes`;
 
 //DATABASE connection
 mongoose
