@@ -58,4 +58,4 @@ app.use(require("./routes/users"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Server listenning
-app.listen(process.env.PORT || 3000);
+app.listen(app.get('port'));
